@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from groq import Groq
 from soul_prompt import SOUL_SYSTEM_PROMPT
@@ -208,9 +209,7 @@ html, body,
 """, unsafe_allow_html=True)
 
 # ── API Key ────────────────────────────────────────────────────────────────────
-import os
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY") = "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"
-
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
